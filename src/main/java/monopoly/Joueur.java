@@ -1,4 +1,4 @@
-package net.guillaume.teaching.refactoring.monopoly;
+package monopoly;
 
 import java.util.ArrayList;
 
@@ -96,17 +96,17 @@ public class Joueur implements Comparable {
 
     public void ouSuisJe() {
         if(argent >0){
-        System.out.println("Sa position est " + position.getName() + ", son argent est : " + argent + ".");
+        System.out.println("Sa position est " + position.getName() + ", son argent est : " + argent + "");
     }
     else {
-            System.out.println("Sa position est " + position.getName() + ". " +getSexeJ() +" n'a plus d'argent.");
+            System.out.println("Sa position est " + position.getName() + " " +getSexeJ() +" n'a plus d'argent.");
         }
 
     }
 
 
     public void monLance(int total) {
-        System.out.println( nom + " fait un total pour son lancer de des de " + total +".");
+        System.out.println( nom + " fait un total pour son lancer de des de " + total + "");
     }
 
     public void aFaitUnDouble(Case prison) {
@@ -233,7 +233,7 @@ public class Joueur implements Comparable {
                             argent = argent - c.getLoyer();
                             if (argent>=0){ // si il paye le loyer
                                 aJ.argent += c.getLoyer();
-                                System.out.println(nom + " paye un loyer de " + c.getLoyer() + " a " + aJ.getNomJ() +".");
+                                System.out.println(nom + " paye un loyer de " + c.getLoyer() + " a " + aJ.getNomJ() + "");
                             }
                             else{ // si il ne peut pas payer le loyer
                                 aJ.argent += c.getLoyer() +argent;
@@ -333,7 +333,7 @@ public class Joueur implements Comparable {
         }
         compteur++;
     }
-        System.out.println(".") ;
+        System.out.println("") ;
     }
 
 

@@ -1,4 +1,4 @@
-package net.guillaume.teaching.refactoring.monopoly;
+package monopoly;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -93,11 +93,11 @@ public class JeuDeMonopoly {
     private void afficheFinDePartie() {
         System.out.println("La partie est terminee !!!");   // L'affichage de la suite etait pas deamnde mais ca parait plus coherent
         trie();
-        System.out.println("Le vainqueur est " + joueurs.get(0).getNomJ() + " avec " + joueurs.get(0).getArgent() +".");
+        System.out.println("Le vainqueur est " + joueurs.get(0).getNomJ() + " avec " + joueurs.get(0).getArgent() + "");
         joueurs.get(0).afficherLesProprietes() ;
         for (int i=1; joueurs.size()>i; i++) {
             if(joueurs.get(i).getArgent()>0){
-            System.out.println(joueurs.get(i).getNomJ() + " est " + (i + 1) + " place avec " + joueurs.get(i).getArgent() +".");
+            System.out.println(joueurs.get(i).getNomJ() + " est " + (i + 1) + " place avec " + joueurs.get(i).getArgent() + "");
             joueurs.get(i).afficherLesProprietes();
         }
             else {
